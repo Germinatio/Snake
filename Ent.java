@@ -5,8 +5,6 @@ public abstract class Ent {
 	//CAMPI
 	public int x, y;
 	
-	//COSTRUTTORE
-	
 	//METODI
 	public abstract String toString();
 		//overrided in sub-classes

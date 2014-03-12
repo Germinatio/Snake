@@ -21,12 +21,12 @@ public class Table {
 	}
 
 	//METODI
-	public boolean add(Ent e, int x, int y) {	//boolean only for testing ...
+	public void add(Ent e, int x, int y) {
 		t[x][y] = e.toString();
-		if(t[x][y]!="   ")
-			return true;
-		else
-			return false;
+	}
+	
+	public void remove(Ent e, int x, int y) {
+		t[x][y] = "   ";
 	}
 	
 	public String toString() {
