@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Food extends Ent{
 	/* this class extends Ent
 	 * it describes the food that sometimes appears on the table
@@ -6,14 +8,18 @@ public class Food extends Ent{
 	 */
 	 
 	 //CAMPI 
-	final String Food="&#164";
+	final String food=" # ";
+	public static int x, y;
+	private Random r = new Random();
 	
 	 //COSTRUTTORE
-	public Food(){
+	public Food() {
+		x = r.nextInt(29);
+		y = r.nextInt(19);
 	}
 	
 	 //METODI	 
 	 public String toString(){
-		return Food;
+		return food;
 	}
 }

@@ -21,6 +21,14 @@ public class Table {
 	}
 
 	//METODI
+	public boolean add(Ent e, int x, int y) {
+		t[x][y] = e.toString();
+		if(t[x][y]!=" ")
+			return true;
+		else
+			return false;
+	}
+	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("============================================================================================\n");
@@ -33,9 +41,5 @@ public class Table {
 		}
 		sb.append("============================================================================================\n");
 		return sb.toString();
-	}
-	
-	public void add(Ent e, int x, int y) {
-		t[x][y] = e.toString();
 	}
 }

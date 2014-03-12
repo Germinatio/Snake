@@ -24,5 +24,9 @@ public class Ent{
 			x = Snake.x;
 			y = Snake.y;
 		}
+		if(this instanceof Food) {
+			x = Food.x;
+			y = Food.y;
+		}
 	}
 }
