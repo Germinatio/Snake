@@ -6,8 +6,11 @@ public class Ent{
 	String Ent;
 	
 	//COSTRUTTORE
-	public Ent(String s){
-		Ent=s;
+	public Ent(){
+		if(this instanceof Food)
+			Ent="&#164";
+		if(this instanceof Snake)
+			Ent="===";
 	}
 	
 	//METODI
