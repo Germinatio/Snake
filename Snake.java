@@ -5,9 +5,13 @@ public class Snake extends Ent{
 	 
 	 //CAMPI 
 	final String Snake="---";
+	public static int x;
+	public static int y;
 	
 	 //COSTRUTTORE
 	public Snake(){
+		x = 15;
+		y = 10;
 	}
 	
 	 //METODI	 

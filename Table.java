@@ -34,4 +34,8 @@ public class Table {
 		sb.append("============================================================================================\n");
 		return sb.toString();
 	}
+	
+	public void add(Ent e, int x, int y) {
+		t[x][y] = e.toString();
+	}
 }

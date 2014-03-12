@@ -3,18 +3,26 @@ public class Ent{
 	 * Its subclasses are Food and Snake
 	 */
 	//CAMPI
-	String Ent;
+	String ent;
+	public static int x, y;
 	
 	//COSTRUTTORE
 	public Ent(){
 		if(this instanceof Food)
-			Ent="&#164";
+			ent="&#164";
 		if(this instanceof Snake)
-			Ent="===";
+			ent="===";
 	}
 	
 	//METODI
 	public String toString(){
-		return Ent;
+		return ent;
+	}
+	
+	public void setXY() {
+		if(this instanceof Snake) {
+			x = Snake.x;
+			y = Snake.y;
+		}
 	}
 }
