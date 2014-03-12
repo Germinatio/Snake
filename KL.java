@@ -1,7 +1,7 @@
 import java.awt.event.*;
 
-public class KL extends KeyAdapter{
-	public void KeyReleased(KeyEvent e){ // when released it keeps the last direction and go on moving 
+public class KL extends KeyAdapter {
+	public void KeyReleased(KeyEvent e) { // when released it keeps the last direction and go on moving 
 		try {
 			Thread.sleep(500);
 		}
@@ -23,7 +23,7 @@ public class KL extends KeyAdapter{
 				break;		
 		}
 	}
-	public void KeyPressed(KeyEvent e){ //when pressed changes direction, then moves
+	public void KeyPressed(KeyEvent e) { //when pressed changes direction, then moves
 		switch (e.getKeyCode()) 
 		{
 			case KeyEvent.VK_UP:

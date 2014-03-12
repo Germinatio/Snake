@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Food extends Ent{
+public class Food extends Ent {
 	/* this class extends Ent
 	 * it describes the food that sometimes appears on the table
 	 * One instance of this class has to be always on the table
@@ -19,7 +19,7 @@ public class Food extends Ent{
 	}
 	
 	 //METODI	 
-	 public String toString(){
+	 public String toString() {
 		return food;
 	}
 }

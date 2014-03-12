@@ -1,23 +1,15 @@
-public class Ent{
+public abstract class Ent {
 	/* This class describes the elements that are on the playing table
 	 * Its subclasses are Food and Snake
 	 */
 	//CAMPI
-	String ent;
-	public static int x, y;
+	public int x, y;
 	
 	//COSTRUTTORE
-	public Ent(){
-		if(this instanceof Food)
-			ent="&#164";
-		if(this instanceof Snake)
-			ent="===";
-	}
 	
 	//METODI
-	public String toString(){
-		return ent;
-	}
+	public abstract String toString();
+		//overrided in sub-classes
 	
 	public void setXY() {
 		if(this instanceof Snake) {

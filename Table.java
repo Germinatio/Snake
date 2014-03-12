@@ -21,9 +21,9 @@ public class Table {
 	}
 
 	//METODI
-	public boolean add(Ent e, int x, int y) {
+	public boolean add(Ent e, int x, int y) {	//boolean only for testing ...
 		t[x][y] = e.toString();
-		if(t[x][y]!=" ")
+		if(t[x][y]!="   ")
 			return true;
 		else
 			return false;

@@ -1,7 +1,7 @@
 public class Test {
 	public static void main(String[] args) {
 		Table t = new Table();
-		Ent s = new Snake();
+		Ent s = new Snake(15, 10);
 		Ent f = new Food();
 		s.setXY();
 		f.setXY();
