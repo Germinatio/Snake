@@ -1,0 +1,16 @@
+﻿20x30 griglia
+ogni cella e' composta da 3 caratteri
+
+classi:
+- table
+- key listener
+- ente(abstract):
+	+ snake
+	+ food
+
+methods to do:
+controllare che ci sia sempre un oggetto food
+controllare se Snake finisce in una posizione dell'arry occupato da un oggetto food
+il cibo dopo un tot di secondi si sposta in un'altra posizione casuale
+il serpente si muove automaticamente nell'ultima direzione data dal player
+
