@@ -8,6 +8,7 @@ public class Test {
 		KL kl = new KL();
 		JFrame jf = new JFrame();
 		jf.getContentPane().add(kl);
+		//jf.pack(); ---> auto JFrame resize (useless if using setBounds())
 		jf.getContentPane().setBounds(0,0,0,0);
 		jf.setVisible(true);
 		while(play) {
@@ -20,7 +21,7 @@ public class Test {
 			t.remove(f, f.x, f.y);
 			System.out.printf("%c[%d;%df", 0x1B, 0, 0);
 			try {
-				Thread.sleep(5000);	//trying "moving" food every 5 sec
+				Thread.sleep(500);	//trying "moving" food every 5 sec
 			}
 			catch(InterruptedException ex) {}
 		}
