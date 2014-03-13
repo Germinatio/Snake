@@ -1,4 +1,6 @@
-import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class Test {
 	public static void main(String[] args) {
@@ -7,10 +9,10 @@ public class Test {
 		Ent s = new Snake(15, 10);
 		KL kl = new KL();
 		JFrame jf = new JFrame();
-		jf.getContentPane().add(kl);
-		//jf.pack(); ---> auto JFrame resize (useless if using setBounds())
-		jf.getContentPane().setBounds(0,0,0,0);
+		//jf.pack(); ---> auto JFrame resize (useless if using setSize())
+		jf.setSize(30,10);
 		jf.setVisible(true);
+		jf.addKeyListener(kl);
 		while(play) {
 			s.setXY();
 			t.add(s, s.x, s.y);

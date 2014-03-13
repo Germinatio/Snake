@@ -1,23 +1,15 @@
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.KeyListener;
 
-public class KL extends JPanel implements KeyListener {
+public class KL implements KeyListener {
 
 	//CAMPI
-	private final boolean debug = true;
+	private final boolean debug = false;
 	private JPanel jp;
 	private JLabel l;
 	private JButton b;
-	
-	//COSTRUTTORI
-	public KL() {
-		jp = new JPanel();
-		l = new JLabel();
-		b = new JButton();
-		b.addKeyListener(this);
-		jp.add(b);
-	}
 	
 	//METODI
 	public void keyReleased(KeyEvent e) { // when released it keeps the last direction and go on moving 
