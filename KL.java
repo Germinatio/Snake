@@ -3,11 +3,21 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.event.KeyListener;
 
-public class KL implements KeyListener {
+public class KL extends JFrame implements KeyListener {
 
 	//CAMPI
 	private final boolean debug = false;
 	private boolean kPressed = false;
+	private JFrame jf;
+	
+	//COSTRUTTORE
+	public KL() {
+		jf = new JFrame();
+		//jf.pack(); ---> auto JFrame resize (useless if using setSize())
+		jf.setSize(30,10);
+		jf.setVisible(true);
+		jf.addKeyListener(this);
+	}
 	
 	//METODI
 	public void keyReleased(KeyEvent e) { // when released it keeps the last direction and go on moving 
@@ -15,28 +25,20 @@ public class KL implements KeyListener {
 		switch (e.getKeyCode()) 
 		{
 			case KeyEvent.VK_UP:
-				while(kPressed) {
 					Snake.y--;
 					if(debug){System.out.println("keyReleased UP");}
-				}
 				break;
 			case KeyEvent.VK_DOWN:
-				while(kPressed) {
 					Snake.y++;
 					if(debug){System.out.println("keyReleased DOWN");}
-				}
 				break;
 			case KeyEvent.VK_LEFT:
-				while(kPressed) {
 					Snake.x--;
 					if(debug){System.out.println("keyReleased LEFT");}
-				}
 				break;
 			case KeyEvent.VK_RIGHT:
-				while(kPressed) {
 					Snake.x++;
 					if(debug){System.out.println("keyReleased RIGHT");}
-				}
 				break;		
 		}
 	}

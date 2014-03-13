@@ -8,11 +8,6 @@ public class Test {
 		Table t = new Table();
 		Ent s = new Snake(45, 10);
 		KL kl = new KL();
-		JFrame jf = new JFrame();
-		//jf.pack(); ---> auto JFrame resize (useless if using setSize())
-		jf.setSize(30,10);
-		jf.setVisible(true);
-		jf.addKeyListener(kl);
 		while(play) {
 			s.setXY();
 			t.add(s, s.x, s.y);
