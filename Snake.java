@@ -4,17 +4,19 @@ public class Snake extends Ent {
 	 */
 	 
 	//CAMPI 
-	final String snake = " S ";
-	public static int x, y;
+	//final String snake = " S ";
+	//public static int x, y;
 	
 	//COSTRUTTORE
 	public Snake(int x, int y) {
-		this.x = x;
-		this.y = y;
+		//this.x = x;
+		//this.y = y;
+                setXY(x, y);
 	}
-	
+
 	//METODI	 
 	public String toString() {
-		return snake;
+		//return snake;
+                return " S ";
 	}
 }
