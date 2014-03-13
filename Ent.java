@@ -3,20 +3,14 @@ public abstract class Ent {
 	 * Its subclasses are Food and Snake
 	 */
 	//CAMPI
-	public int x, y;
+	protected int x, y;
 	
 	//METODI
 	public abstract String toString();
 		//overrided in sub-classes
 	
-	public void setXY() {
-		if(this instanceof Snake) {
-			x = Snake.x;
-			y = Snake.y;
-		}
-		if(this instanceof Food) {
-			x = Food.x;
-			y = Food.y;
-		}
+	public void setXY(int x, int y) {
+            this.x = x;
+            this.y = y;
 	}
 }

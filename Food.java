@@ -8,18 +8,20 @@ public class Food extends Ent {
 	 */
 	 
 	 //CAMPI 
-	final String food=" # ";
-	public static int x, y;
+	//final String food=" # ";
+	//public static int x, y;
 	private Random r = new Random();
 	
 	 //COSTRUTTORE
 	public Food() {
-		x = r.nextInt(29);
-		y = r.nextInt(19);
+		//x = r.nextInt(29);
+		//y = r.nextInt(19);
+                setXY(x, y);
 	}
 	
 	 //METODI	 
 	 public String toString() {
-		return food;
+		//return food;
+                return " # ";
 	}
 }
