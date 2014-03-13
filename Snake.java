@@ -4,7 +4,7 @@ public class Snake extends Ent {
 	 */
 	 
 	//CAMPI 
-	final String snake = " S ";
+	final String snake = "S";
 	public static int x, y;
 	
 	//COSTRUTTORE

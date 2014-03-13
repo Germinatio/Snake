@@ -7,9 +7,7 @@ public class KL implements KeyListener {
 
 	//CAMPI
 	private final boolean debug = false;
-	private JPanel jp;
-	private JLabel l;
-	private JButton b;
+	private boolean kPressed = false;
 	
 	//METODI
 	public void keyReleased(KeyEvent e) { // when released it keeps the last direction and go on moving 
@@ -17,20 +15,28 @@ public class KL implements KeyListener {
 		switch (e.getKeyCode()) 
 		{
 			case KeyEvent.VK_UP:
-				Snake.y--;
-				if(debug){System.out.println("keyReleased UP");}
+				while(kPressed) {
+					Snake.y--;
+					if(debug){System.out.println("keyReleased UP");}
+				}
 				break;
 			case KeyEvent.VK_DOWN:
-				Snake.y++;
-				if(debug){System.out.println("keyReleased DOWN");}
+				while(kPressed) {
+					Snake.y++;
+					if(debug){System.out.println("keyReleased DOWN");}
+				}
 				break;
 			case KeyEvent.VK_LEFT:
-				Snake.x--;
-				if(debug){System.out.println("keyReleased LEFT");}
+				while(kPressed) {
+					Snake.x--;
+					if(debug){System.out.println("keyReleased LEFT");}
+				}
 				break;
 			case KeyEvent.VK_RIGHT:
-				Snake.x++;
-				if(debug){System.out.println("keyReleased RIGHT");}
+				while(kPressed) {
+					Snake.x++;
+					if(debug){System.out.println("keyReleased RIGHT");}
+				}
 				break;		
 		}
 	}
@@ -41,18 +47,22 @@ public class KL implements KeyListener {
 			case KeyEvent.VK_UP:
 				Snake.y--;
 				if(debug){System.out.println("keyPressed UP");}
+				kPressed = true;
 				break;
 			case KeyEvent.VK_DOWN:
 				Snake.y++;
 				if(debug){System.out.println("keyPressed DOWN");}
+				kPressed = true;
 				break;
 			case KeyEvent.VK_LEFT:
 				Snake.x--;
 				if(debug){System.out.println("keyPressed LEFT");}
+				kPressed = true;
 				break;
 			case KeyEvent.VK_RIGHT:
 				Snake.x++;
 				if(debug){System.out.println("keyPressed RIGHT");}
+				kPressed = true;
 				break;		
 		}
 	}

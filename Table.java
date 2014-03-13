@@ -13,10 +13,10 @@ public class Table {
 	
 	//COSTRUTTORE
 	public Table() {
-		t = new String[30][20];
-		for(int x = 0; x < 30; x++) {
+		t = new String[90][20];
+		for(int x = 0; x < 90; x++) {
 			for(int y = 0; y < 20; y++)
-				t[x][y] = "   ";
+				t[x][y] = " ";
 		}
 	}
 
@@ -26,7 +26,7 @@ public class Table {
 	}
 	
 	public void remove(Ent e, int x, int y) {
-		t[x][y] = "   ";
+		t[x][y] = " ";
 	}
 	
 	public String toString() {
@@ -34,7 +34,7 @@ public class Table {
 		sb.append("============================================================================================\n");
 		for(int y = 0; y < 20; y++) {
 			sb.append("|");
-			for(int x = 0; x < 30; x++) {
+			for(int x = 0; x < 90; x++) {
 				sb.append(t[x][y]);
 			}
 			sb.append("|\n");
